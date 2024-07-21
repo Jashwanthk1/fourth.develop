@@ -110,6 +110,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>fourt-develop</finalName>
 	</build>
 
 </project>
