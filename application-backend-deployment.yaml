@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: application-backend
+  labels:
+    app: application-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: application-backend
+  template:
+    metadata:
+      labels:
+        app: application-backend
+    spec:
+      containers:
+      - name: application-backend
+        image: localhost:32000/kubetest/application-backend:latest
+        ports:
+        - containerPort: 8083
+        command: ["java", "-jar", "/app/fourt-develop.jar"]  # Adjust path as needed
