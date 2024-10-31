@@ -27,4 +27,9 @@ public class UserController {
 		return userService.getUsers();
 	}
 
+	@GetMapping("/text")
+	public String getTest() {
+		return "Success";
+	}
+
 }
